@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HowMuchDoISmoke</string>
+    <string name="last_title">Скурено сьогодні</string>
+    <string name="defoult_used">0</string>
+    <string name="defoult_max">20</string>
+    <string name="smoke_yestorday">Скурено вчора</string>
+    <string name="smoke_average">Cкурено
+        в середньому</string>
 </resources>
