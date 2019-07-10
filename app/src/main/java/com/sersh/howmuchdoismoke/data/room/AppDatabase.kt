@@ -8,10 +8,7 @@ import android.arch.persistence.room.*
 //    abstract fun weatherDao(): WeatherDao
 //}
 
-@Database(entities = [CigaretteEntity::class], version = 1, exportSchema = false)
+@Database(entities = [Cigarette::class], version = 1,exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-
     abstract fun cigaretteDao(): CigaretteDao
-
-
 }

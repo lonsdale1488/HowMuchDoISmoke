@@ -7,27 +7,28 @@ import android.arch.persistence.room.*
 interface CigaretteDao {
 
 
-    @get:Query("SELECT * FROM CigaretteEntity")
-    val all: List<CigaretteEntity>
+
+    @get:Query("SELECT * FROM Cigarette")
+    val all: List<Cigarette>
 
 
 // can create problem
-    @Query("SELECT * FROM CigaretteEntity WHERE uid = :uid")
-   fun findByName(uid: Int): CigaretteEntity
+    @Query("SELECT * FROM Cigarette WHERE uid = :uid")
+   fun findByName(uid: Int): Cigarette
 
     @Insert
-    fun insert(cigarette: CigaretteEntity)
+    fun insert(cigarette: Cigarette)
 
     @Update
-    fun update(cigarette: CigaretteEntity)
+    fun update(cigarette: Cigarette)
 
-    @Query("DELETE FROM CigaretteEntity")
+    @Query("DELETE FROM Cigarette")
     fun deleteAll()
 
 
 
     @Delete
-    fun delete(cigarette: CigaretteEntity)
+    fun delete(cigarette: Cigarette)
 }
 
 //@Dao
