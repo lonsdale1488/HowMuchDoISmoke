@@ -1,11 +1,15 @@
 package com.sersh.howmuchdoismoke.ui
 
 
+import android.provider.ContactsContract
+import android.support.constraint.solver.LinearSystem
 import android.util.Log
+import com.sersh.howmuchdoismoke.DateMy
 import com.sersh.howmuchdoismoke.data.room.Cigarette
 
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.HashMap
 
 
 class InformationPresenter(var iInfirmationView: IInfirmationView) {
@@ -36,34 +40,35 @@ class InformationPresenter(var iInfirmationView: IInfirmationView) {
    }
 
 
-//    fun smokeYestordsy ()
-//    {
-//
-//        var dayYesterday= infirmationModel.getDataYesterday(true).get(2)
-//        var monthYesterday= infirmationModel.getDataYesterday(true).get(1)
-//        var yearYesterday= infirmationModel.getDataYesterday(true).get(0)
-//
-//        Log.d(LOG_TAG,"yestorday" + infirmationModel.getDataYesterday() )
-//
-//       iInfirmationView.setCigaretYestorday(somoukeOnData(dayYesterday,monthYesterday, yearYesterday, infirmationModel.list ))
-//  }
+    fun smokeYestordsy ()
+    {
 
-//    fun somoukeAverage ()
-//    {
-//        var result = 0
-//
-//  for (i in -8..-1 step 1)
-//  {
-//
-//      var days= infirmationModel.getData(i).get(2)
-//      var month= infirmationModel.getData(i).get(1)
-//      var year= infirmationModel.getData(i).get(0)
-//      var res = somoukeOnData(days, month, year, infirmationModel.list)
-//      Log.d(LOG_TAG,"res = $res" )
-//      result += res
-//        }
-//        iInfirmationView.setCigaretAverage(result/7)
-//    }
+        Log.d(LOG_TAG,"yestorday" + infirmationModel.getDataYesterday() )
+
+       iInfirmationView.setCigaretYestorday(
+           somoukeOnData(infirmationModel.getDataYesterday(true).get(2),
+               infirmationModel.getDataYesterday(true).get(1),
+               infirmationModel.getDataYesterday(true).get(0),
+               infirmationModel.list ))
+  }
+
+    fun somoukeAverage ()
+    {
+        var result = 0
+
+  for (i in -8..-1 step 1)
+  {
+      var res = somoukeOnData(
+          infirmationModel.getData(i).get(2),
+          infirmationModel.getData(i).get(1),
+          infirmationModel.getData(i).get(0),
+          infirmationModel.list)
+      Log.d(LOG_TAG,"res = $res" )
+      result += res
+        }
+        iInfirmationView.setCigaretAverage(result/7)
+    }
+
     fun somoukeOnData (day:String, month:String, year:String, list:List<Cigarette>):Int
     {
 
@@ -82,7 +87,27 @@ class InformationPresenter(var iInfirmationView: IInfirmationView) {
 
     }
 
+ fun smoukeGraf ()
+ {
+    var list: MutableList<DateMy>  = mutableListOf()
+     for (i in -8..-1 step 1)
+     {
+         somoukeOnData(
+             infirmationModel.getData(i).get(2),
+             infirmationModel.getData(i).get(1),
+             infirmationModel.getData(i).get(0),
+             infirmationModel.list)
+       var data =  DateMy(somoukeOnData(
+             infirmationModel.getData(i).get(2),
+             infirmationModel.getData(i).get(1),
+             infirmationModel.getData(i).get(0),
+             infirmationModel.list)
+         , infirmationModel.getData(i).get(2)+ "." + infirmationModel.getData(i).get(1))
 
+         list.add(data)
+     }
+     iInfirmationView.Chart(list)
+ }
 
 
 

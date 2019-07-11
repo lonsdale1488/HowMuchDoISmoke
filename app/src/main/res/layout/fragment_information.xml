@@ -189,7 +189,7 @@
 
         <LinearLayout
             android:layout_width="320dp"
-            android:layout_height="190dp"
+            android:layout_height="220dp"
             android:layout_gravity="center"
             android:background="#FAFAFA"
             android:orientation="vertical">
@@ -220,8 +220,10 @@
 
             <com.jjoe64.graphview.GraphView
                 android:layout_width="match_parent"
-                android:layout_height="200dip"
-                android:id="@+id/graph" />
+                android:layout_height="120dp"
+                android:id="@+id/graph"
+                android:layout_marginBottom="20dp"
+            />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

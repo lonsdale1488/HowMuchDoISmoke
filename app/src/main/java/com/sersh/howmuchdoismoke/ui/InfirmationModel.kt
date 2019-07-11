@@ -30,7 +30,6 @@ class InfirmationModel (var infirmationPresenter: InformationPresenter) {
     }
     fun getDataYesterday(listFormat: Boolean):List<String>
     {
-
         val call = Calendar.getInstance()
         call.add(Calendar.DATE,-1)
         val DataYestorday = dateFormat.format(call.getTime()).toString().split(".")
@@ -47,13 +46,13 @@ class InfirmationModel (var infirmationPresenter: InformationPresenter) {
 
     fun getData(int:Int):List<String>
     {
-
         val call = Calendar.getInstance()
         call.add(Calendar.DATE,int)
-        val DataYestorday = dateFormat.format(call.getTime()).toString().split(".")
-        Log.d(LOG_TAG,"getData - $DataYestorday" )
-        return DataYestorday
+        val data = dateFormat.format(call.getTime()).toString().split(".")
+        Log.d(LOG_TAG,"getData - $data" )
+        return data
     }
+
 
 
 
