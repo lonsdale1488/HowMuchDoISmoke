@@ -32,7 +32,7 @@ class InfirmationModel (var infirmationPresenter: InformationPresenter) {
     {
         val call = Calendar.getInstance()
         call.add(Calendar.DATE,-1)
-        val DataYestorday = dateFormat.format(call.getTime()).toString().split(".")
+        val DataYestorday = dateFormat.format(call.time).toString().split(".")
         return DataYestorday
     }
     fun getDataYesterday():String

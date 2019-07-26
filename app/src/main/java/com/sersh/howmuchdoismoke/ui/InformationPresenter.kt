@@ -24,7 +24,7 @@ class InformationPresenter(var iInfirmationView: IInfirmationView) {
    fun addCigaret()
    {
        Log.d(LOG_TAG,"work addCigaret()")
-      Log.d(LOG_TAG,dateFormat.format(cal.getTime()).toString())
+
       infirmationModel.localDatabase.cigaretteDao().insert(Cigarette(1,"",infirmationModel.getDataToday()))
         Log.d(LOG_TAG,"start  setCigaret()")
        infirmationModel.list = infirmationModel.localDatabase.cigaretteDao().all

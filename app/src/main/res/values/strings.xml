@@ -5,5 +5,9 @@
     <string name="defoult_max">20</string>
     <string name="smoke_yestorday">Скурено вчора</string>
     <string name="smoke_average">Cкурено
-        в середньому</string>
+        в середньому
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

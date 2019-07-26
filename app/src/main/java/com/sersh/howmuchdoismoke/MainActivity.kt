@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.NotificationCompat
 import com.sersh.howmuchdoismoke.ui.InformationFragment
+import com.sersh.howmuchdoismoke.ui.StatisticFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +27,9 @@ class MainActivity : AppCompatActivity() {
     fun showInformationFragment() {
         replaceFragment(InformationFragment())
     }
-
+    fun showStatisticFragment() {
+        replaceFragment(StatisticFragment())
+    }
 
     fun addNotification(notification: Notification, id:Int)
     {
@@ -34,11 +37,9 @@ class MainActivity : AppCompatActivity() {
         nonificationMeneger.notify(id,notification)
     }
 
-    // повідомлення
+
     fun notification()
     {
-
-
         val intentMA = Intent(this, MainActivity::class.java)
         val pendingIntent = PendingIntent.getActivities(this,0, arrayOf(intentMA), PendingIntent.FLAG_UPDATE_CURRENT)
         val builder = NotificationCompat.Builder(this)
