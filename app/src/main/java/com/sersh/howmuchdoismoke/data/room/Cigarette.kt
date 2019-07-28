@@ -1,7 +1,7 @@
 package com.sersh.howmuchdoismoke.data.room
 
-import android.arch.persistence.room.*
-import android.arch.persistence.room.PrimaryKey
+import androidx.room.*
+import androidx.room.PrimaryKey
 
 
 

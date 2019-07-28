@@ -1,6 +1,6 @@
 package com.sersh.howmuchdoismoke.data.room
 
-import android.arch.persistence.room.*
+import androidx.room.*
 
 
 //@Database(entities = [Weather::class], version = 1, exportSchema = false)

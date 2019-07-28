@@ -4,7 +4,7 @@ package com.sersh.howmuchdoismoke.data.room
 
 
 import android.app.Application
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import android.util.Log
 
 

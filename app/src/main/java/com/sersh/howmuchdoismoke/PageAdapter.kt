@@ -1,27 +1,38 @@
 package com.sersh.howmuchdoismoke
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
 
 
 
 
-class PageAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm){
+class PageAdapter (fm: androidx.fragment.app.FragmentManager) : androidx.fragment.app.FragmentPagerAdapter(fm){
     private  val ARG_OBJECT = "object"
-    override fun getItem(p0: Int): Fragment {
-        val fragment = Fragment()
+    override fun getItem(p0: Int): androidx.fragment.app.Fragment {
+        val fragment = androidx.fragment.app.Fragment()
         fragment.arguments = Bundle().apply {
-            // Our object is just an integer :-P
+
+
             putString(ARG_OBJECT, "Fagment" + p0 + 1)
         }
+
         return fragment
     }
 
-    override fun getCount(): Int = 4
+
+    override fun getCount(): Int = 5
 
     override fun getPageTitle(position: Int): CharSequence {
+        when(position)
+        {
+            0->return "День"
+            1->return "Тиждень"
+            2->return "Місяць"
+            3->return "Рік"
+            4->return "Весь час "
+        }
         return "Fragment ${(position + 1)}"
     }
 }

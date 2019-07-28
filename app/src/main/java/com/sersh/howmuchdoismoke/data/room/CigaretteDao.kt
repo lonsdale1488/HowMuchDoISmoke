@@ -1,6 +1,6 @@
 package com.sersh.howmuchdoismoke.data.room
 
-import android.arch.persistence.room.*
+import androidx.room.*
 
 
 @Dao

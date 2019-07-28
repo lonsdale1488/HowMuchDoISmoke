@@ -1,7 +1,7 @@
 package com.sersh.howmuchdoismoke.ui
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -19,13 +19,13 @@ import java.text.SimpleDateFormat
 
 import java.util.*
 
-import android.support.annotation.NonNull
-import android.support.design.widget.BottomNavigationView
+import androidx.annotation.NonNull
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sersh.howmuchdoismoke.MainActivity
 import com.sersh.howmuchdoismoke.R
 
 
-class InformationFragment : Fragment(), IInfirmationView {
+class InformationFragment : androidx.fragment.app.Fragment(), IInfirmationView {
     val presenter by lazy { InformationPresenter(this) }
     var LOG_TAG = "InformationFragment"
     var boolean = true

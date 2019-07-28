@@ -4,10 +4,10 @@ import android.app.Notification
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.NotificationCompat
+import androidx.fragment.app.Fragment
+import androidx.core.app.NotificationCompat
 import com.sersh.howmuchdoismoke.ui.InformationFragment
 import com.sersh.howmuchdoismoke.ui.StatisticFragment
 
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         showInformationFragment()
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    private fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.frame, fragment).addToBackStack(null).commit()
     }
 
