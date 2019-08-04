@@ -6,9 +6,8 @@ import android.app.PendingIntent
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import androidx.core.app.NotificationCompat
-import com.sersh.howmuchdoismoke.ui.InformationFragment
+import com.sersh.howmuchdoismoke.ui.Infirmatio.InformationFragment
 import com.sersh.howmuchdoismoke.ui.StatisticFragment
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +20,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
-        supportFragmentManager.beginTransaction().replace(R.id.frame, fragment).addToBackStack(null).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.frame, fragment)
+         //   .addToBackStack(null)
+            .commit()
     }
 
     fun showInformationFragment() {

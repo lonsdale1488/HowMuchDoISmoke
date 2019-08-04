@@ -1,15 +1,12 @@
-package com.sersh.howmuchdoismoke.ui
+package com.sersh.howmuchdoismoke.ui.Infirmatio
 
 
-import android.provider.ContactsContract
-import androidx.constraintlayout.solver.LinearSystem
 import android.util.Log
-import com.sersh.howmuchdoismoke.DateMy
-import com.sersh.howmuchdoismoke.data.room.Cigarette
+import com.sersh.howmuchdoismoke.utils.DateMy
+import com.sersh.howmuchdoismoke.data.model.Cigarette
 
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.HashMap
 
 
 class InformationPresenter(var iInfirmationView: IInfirmationView) {
@@ -25,7 +22,13 @@ class InformationPresenter(var iInfirmationView: IInfirmationView) {
    {
        Log.d(LOG_TAG,"work addCigaret()")
 
-      infirmationModel.localDatabase.cigaretteDao().insert(Cigarette(1,"",infirmationModel.getDataToday()))
+      infirmationModel.localDatabase.cigaretteDao().insert(
+          Cigarette(
+              1,
+              "",
+              infirmationModel.getDataToday()
+          )
+      )
         Log.d(LOG_TAG,"start  setCigaret()")
        infirmationModel.list = infirmationModel.localDatabase.cigaretteDao().all
      setCigaret()
@@ -71,7 +74,6 @@ class InformationPresenter(var iInfirmationView: IInfirmationView) {
 
     fun somoukeOnData (day:String, month:String, year:String, list:List<Cigarette>):Int
     {
-
         var variable = 0
         for (i in 0..list.size-1)
         {
@@ -97,12 +99,15 @@ class InformationPresenter(var iInfirmationView: IInfirmationView) {
              infirmationModel.getData(i).get(1),
              infirmationModel.getData(i).get(0),
              infirmationModel.list)
-       var data =  DateMy(somoukeOnData(
-             infirmationModel.getData(i).get(2),
-             infirmationModel.getData(i).get(1),
-             infirmationModel.getData(i).get(0),
-             infirmationModel.list)
-         , infirmationModel.getData(i).get(2)+ "." + infirmationModel.getData(i).get(1))
+       var data = DateMy(
+           somoukeOnData(
+               infirmationModel.getData(i).get(2),
+               infirmationModel.getData(i).get(1),
+               infirmationModel.getData(i).get(0),
+               infirmationModel.list
+           )
+           , infirmationModel.getData(i).get(2) + "." + infirmationModel.getData(i).get(1)
+       )
 
          list.add(data)
      }

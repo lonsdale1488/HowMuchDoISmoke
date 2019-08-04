@@ -1,4 +1,4 @@
-package com.sersh.howmuchdoismoke.data.room
+package com.sersh.howmuchdoismoke.data.model
 
 import androidx.room.*
 import androidx.room.PrimaryKey

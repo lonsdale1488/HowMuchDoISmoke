@@ -1,8 +1,8 @@
-package com.sersh.howmuchdoismoke.ui
+package com.sersh.howmuchdoismoke.ui.Infirmatio
 
 import android.util.Log
 
-import com.sersh.howmuchdoismoke.data.room.AppDatabase
+import com.sersh.howmuchdoismoke.data.local.AppDatabase
 import com.sersh.howmuchdoismoke.data.room.RoomApplication
 import java.text.SimpleDateFormat
 import java.util.*
@@ -16,14 +16,12 @@ class InfirmationModel (var infirmationPresenter: InformationPresenter) {
 
     fun getDataToday():String
     {
-
         val cal = Calendar.getInstance()
         var dataToday = dateFormat.format(cal.getTime()).toString()
         return dataToday
     }
     fun getDataToday(listFormat: Boolean):List<String>
     {
-
         val cal = Calendar.getInstance()
         var dataToday = dateFormat.format(cal.getTime()).toString().split(".")
         return dataToday
@@ -37,7 +35,6 @@ class InfirmationModel (var infirmationPresenter: InformationPresenter) {
     }
     fun getDataYesterday():String
     {
-
         val call = Calendar.getInstance()
         call.add(Calendar.DATE,-1)
         val DataYestorday = dateFormat.format(call.getTime()).toString()

@@ -1,6 +1,6 @@
-package com.sersh.howmuchdoismoke.ui
+package com.sersh.howmuchdoismoke.ui.Infirmatio
 
-import com.sersh.howmuchdoismoke.DateMy
+import com.sersh.howmuchdoismoke.utils.DateMy
 
 interface IInfirmationView {
    fun setCigaret(number:Int)

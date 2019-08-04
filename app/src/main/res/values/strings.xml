@@ -12,6 +12,15 @@
     <string name="mount">Місяць</string>
     <string name="year">Рік</string>
     <string name="all_time">Весь час</string>
+    <string name="all_smoke">Всього викурено</string>
+    <string name="total_number_of_cigarettes_smoked">Загальна к-ть викурених цигарок</string>
+    <string name="electro_sigar">Електроних сигарет</string>
+    <string name="sigar">Простих сигарет</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+
 </resources>

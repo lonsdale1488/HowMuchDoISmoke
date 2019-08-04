@@ -1,7 +1,6 @@
-package com.sersh.howmuchdoismoke.ui
+package com.sersh.howmuchdoismoke.ui.Infirmatio
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,7 @@ import com.jjoe64.graphview.DefaultLabelFormatter
 
 import kotlinx.android.synthetic.main.fragment_information.*
 import com.jjoe64.graphview.series.LineGraphSeries
-import com.sersh.howmuchdoismoke.DateMy
+import com.sersh.howmuchdoismoke.utils.DateMy
 
 import com.jjoe64.graphview.GraphView
 import com.jjoe64.graphview.series.DataPoint
@@ -19,26 +18,22 @@ import java.text.SimpleDateFormat
 
 import java.util.*
 
-import androidx.annotation.NonNull
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sersh.howmuchdoismoke.MainActivity
 import com.sersh.howmuchdoismoke.R
 
 
 class InformationFragment : androidx.fragment.app.Fragment(), IInfirmationView {
-    val presenter by lazy { InformationPresenter(this) }
+  private  val presenter by lazy { InformationPresenter(this) }
     var LOG_TAG = "InformationFragment"
     var boolean = true
 
 
-    //  proba
     lateinit var series: LineGraphSeries<DataPoint>
     lateinit var graphView: GraphView
     var dateFormat = SimpleDateFormat("dd.MM")
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         return inflater.inflate(R.layout.fragment_information, container, false)
     }
 

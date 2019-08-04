@@ -6,6 +6,7 @@
     <color name="relative_color">#475061</color>
     <color name="cucle_color">#CC40C4FF</color>
     <color name="front_color">#FAFAFA</color>
+    <color name="back_color">#F5F5F5</color>
     <color name="tablayout_color">#22E60F</color>
     <color name="change_tab">#C7EEFF</color>
 </resources>

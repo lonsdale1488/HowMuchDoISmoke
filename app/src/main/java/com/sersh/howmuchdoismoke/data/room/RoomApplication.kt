@@ -6,6 +6,7 @@ package com.sersh.howmuchdoismoke.data.room
 import android.app.Application
 import androidx.room.Room
 import android.util.Log
+import com.sersh.howmuchdoismoke.data.local.AppDatabase
 
 
 class RoomApplication : Application() {
