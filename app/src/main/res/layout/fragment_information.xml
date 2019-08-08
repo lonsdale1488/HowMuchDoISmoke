@@ -14,6 +14,7 @@
         tools:context=".ui.Infirmatio.InformationFragment">
 
         <RelativeLayout
+                android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="286dp"
             android:background="@color/relative_color">
@@ -51,7 +52,6 @@
                 android:background="@drawable/cycle_blue"
                 android:padding="20dp"
                 android:src="@drawable/cigarette"
-
                 />
         </RelativeLayout>
 

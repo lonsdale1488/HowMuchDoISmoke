@@ -6,12 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sersh.howmuchdoismoke.ui.adapter.PageAdapter
-
 import com.sersh.howmuchdoismoke.R
-
-
-
-
 
 class StatisticFragment : androidx.fragment.app.Fragment() {
     private lateinit var pageAdapter : PageAdapter

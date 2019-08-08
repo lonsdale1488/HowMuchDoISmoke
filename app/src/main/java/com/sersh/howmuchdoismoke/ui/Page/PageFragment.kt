@@ -1,4 +1,4 @@
-package com.sersh.howmuchdoismoke.ui
+package com.sersh.howmuchdoismoke.ui.Page
 
 
 import android.os.Bundle
@@ -10,16 +10,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.sersh.howmuchdoismoke.R
+import com.sersh.howmuchdoismoke.ui.Infirmatio.InformationPresenter
 import com.sersh.howmuchdoismoke.ui.adapter.RecycleAdapters
 import kotlinx.android.synthetic.main.fragment_day.*
 
 
-class PageFragment  : Fragment() {
-
+class PageFragment (var position:Int)  : Fragment(), PageView  {
+    private val presenter by lazy { PagePresenter(this) }
     private lateinit var adapter: RecyclerView.Adapter<*>
     private lateinit var recycle: RecyclerView
     private lateinit var recycleManeger: RecyclerView.LayoutManager
-    var  list: List<String> = listOf("1","2","3","4","5","6","7","8","9","10")
+   // var  list: List<String> = listOf("1","2","3","4","5","6","7","8","9","10")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,14 +28,14 @@ class PageFragment  : Fragment() {
         var root = inflater.inflate(R.layout.fragment_day, container, false)
         recycle = root.findViewById<RecyclerView>(R.id.recyclelistview)
         recycleManeger = LinearLayoutManager(activity)
-        adapter = RecycleAdapters(list)
+        adapter = RecycleAdapters(presenter.getAllList(position))
         recycle.adapter = adapter
         recycle.layoutManager = recycleManeger
         return root
     }
 
     override fun onResume() {
-     //  init()
+        init()
         super.onResume()
     }
 
@@ -42,9 +43,10 @@ class PageFragment  : Fragment() {
     fun init ()
     {
 
-        all_sigaret.text = ""
-        similar_sigaret.text = ""
-        electronic_sigaret.text = ""
+        all_sigaret.text = presenter.getAllSiagret(position).get(0).toString()
+        similar_sigaret.text = presenter.getAllSiagret(position).get(1).toString()
+        electronic_sigaret.text = presenter.getAllSiagret(position).get(2).toString()
+
     }
 
 

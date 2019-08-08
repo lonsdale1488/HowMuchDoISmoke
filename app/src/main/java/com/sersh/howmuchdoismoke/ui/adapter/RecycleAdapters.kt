@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sersh.howmuchdoismoke.R
+import com.sersh.howmuchdoismoke.utils.DateMy
 
-class RecycleAdapters (val list: List<String>): RecyclerView.Adapter<RecycleAdapters.MyViewHolder>(){
+class RecycleAdapters (val list: List<DateMy>): RecyclerView.Adapter<RecycleAdapters.MyViewHolder>(){
 
 
 
@@ -17,8 +18,9 @@ class RecycleAdapters (val list: List<String>): RecyclerView.Adapter<RecycleAdap
     }
 
     override fun onBindViewHolder(holder: RecycleAdapters.MyViewHolder, position: Int) {
-        holder.one!!.text = list[position]
-            holder.two!!.text = list[position]
+
+        holder.one!!.text = list.get(position).data
+            holder.two!!.text = list.get(position).number.toString()
     }
 
     override fun getItemCount(): Int {

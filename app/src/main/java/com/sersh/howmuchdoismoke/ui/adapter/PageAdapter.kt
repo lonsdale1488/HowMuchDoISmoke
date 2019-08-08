@@ -1,22 +1,12 @@
 package com.sersh.howmuchdoismoke.ui.adapter
 
-import com.sersh.howmuchdoismoke.ui.PageFragment
+import com.sersh.howmuchdoismoke.ui.Page.PageFragment
 
 
 class PageAdapter (fm: androidx.fragment.app.FragmentManager) : androidx.fragment.app.FragmentPagerAdapter(fm){
     private  val ARG_OBJECT = "object"
     override fun getItem(p0: Int): androidx.fragment.app.Fragment {
-//        val fragment = androidx.fragment.app.Fragment()
-//        fragment.arguments = Bundle().apply {
-//
-//
-//            putString(ARG_OBJECT, "Fagment" + p0 + 1)
-//        }
-
-
-
-
-        return PageFragment()
+        return PageFragment(p0)
     }
 
 
