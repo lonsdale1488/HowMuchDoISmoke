@@ -10,8 +10,6 @@ import com.sersh.howmuchdoismoke.utils.DateMy
 
 class RecycleAdapters (val list: List<DateMy>): RecyclerView.Adapter<RecycleAdapters.MyViewHolder>(){
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val item = LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent, false)
         return MyViewHolder(item)

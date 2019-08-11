@@ -2,11 +2,10 @@ package com.sersh.howmuchdoismoke.ui
 
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayout
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.sersh.howmuchdoismoke.ui.adapter.PageAdapter
 import com.sersh.howmuchdoismoke.R
+import android.view.*
+
 
 class StatisticFragment : androidx.fragment.app.Fragment() {
     private lateinit var pageAdapter : PageAdapter
@@ -17,7 +16,7 @@ class StatisticFragment : androidx.fragment.app.Fragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_statistic, container, false)
+        return inflater.inflate(com.sersh.howmuchdoismoke.R.layout.fragment_statistic, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -26,6 +25,11 @@ class StatisticFragment : androidx.fragment.app.Fragment() {
         viewPager.adapter = pageAdapter
         tabLayout = view.findViewById(com.sersh.howmuchdoismoke.R.id.tab_layout)
         tabLayout.setupWithViewPager(viewPager)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
 

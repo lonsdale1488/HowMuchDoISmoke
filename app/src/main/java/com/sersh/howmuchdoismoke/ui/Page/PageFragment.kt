@@ -20,7 +20,7 @@ class PageFragment (var position:Int)  : Fragment(), PageView  {
     private lateinit var adapter: RecyclerView.Adapter<*>
     private lateinit var recycle: RecyclerView
     private lateinit var recycleManeger: RecyclerView.LayoutManager
-   // var  list: List<String> = listOf("1","2","3","4","5","6","7","8","9","10")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,7 +42,6 @@ class PageFragment (var position:Int)  : Fragment(), PageView  {
 
     fun init ()
     {
-
         all_sigaret.text = presenter.getAllSiagret(position).get(0).toString()
         similar_sigaret.text = presenter.getAllSiagret(position).get(1).toString()
         electronic_sigaret.text = presenter.getAllSiagret(position).get(2).toString()

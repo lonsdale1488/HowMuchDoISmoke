@@ -26,17 +26,5 @@ constructor( numbers: Int, names: String, datas: String, type: String, price: Do
 
 
 
-//{
-//
-//    @PrimaryKey
-//    var uid: Long = 0
-//
-//    var name: String? = null
-//
-//    var salary: Int = 0
-//}
-
-
-
 
 

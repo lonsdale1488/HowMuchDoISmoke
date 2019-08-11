@@ -21,10 +21,10 @@ class InformationFragment : androidx.fragment.app.Fragment(), IInfirmationView {
 
     private val presenter by lazy { InformationPresenter(this) }
     var LOG_TAG = "InformationFragment"
-  private  var boolean = true
-  private  lateinit var series: LineGraphSeries<DataPoint>
-  private  lateinit var graphView: GraphView
-  private  var dateFormat = SimpleDateFormat("dd.MM")
+    private var boolean = true
+    private lateinit var series: LineGraphSeries<DataPoint>
+    private lateinit var graphView: GraphView
+    private var dateFormat = SimpleDateFormat("dd.MM")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_information, container, false)
@@ -46,7 +46,10 @@ class InformationFragment : androidx.fragment.app.Fragment(), IInfirmationView {
 
     override fun onResume() {
         super.onResume()
-        fisrsSatrt()
+        presenter.setCigaret()
+        presenter.smokeYestordsy()
+        presenter.smokeAverage()
+        presenter.smoukeGraf()
         initLisener()
     }
 
@@ -54,7 +57,7 @@ class InformationFragment : androidx.fragment.app.Fragment(), IInfirmationView {
         return boolean
     }
 
-  private  fun initLisener() {
+    private fun initLisener() {
         image_cigarette.setOnClickListener {
             presenter.addCigaret()
         }
@@ -88,12 +91,6 @@ class InformationFragment : androidx.fragment.app.Fragment(), IInfirmationView {
         }
     }
 
-    fun fisrsSatrt() {
-        presenter.setCigaret()
-        presenter.smokeYestordsy()
-        presenter.smokeAverage()
-        presenter.smoukeGraf()
-    }
 
     override fun overUse() {
         relativeLayout.setBackgroundResource(R.color.colorAccent)

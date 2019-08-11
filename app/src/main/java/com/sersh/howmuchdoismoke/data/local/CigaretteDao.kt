@@ -3,10 +3,8 @@ package com.sersh.howmuchdoismoke.data.local
 import androidx.room.*
 import com.sersh.howmuchdoismoke.data.model.Cigarette
 
-
 @Dao
 interface CigaretteDao {
-
 
 
     @get:Query("SELECT * FROM Cigarette")

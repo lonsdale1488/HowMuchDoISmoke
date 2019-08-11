@@ -1,8 +1,5 @@
 package com.sersh.howmuchdoismoke.data.room
 
-
-
-
 import android.app.Application
 import androidx.room.Room
 import android.util.Log
@@ -16,9 +13,6 @@ class RoomApplication : Application() {
 companion object {
     var instance: RoomApplication? = null
 }
-
-
-
 
     override fun onCreate() {
         super.onCreate()
