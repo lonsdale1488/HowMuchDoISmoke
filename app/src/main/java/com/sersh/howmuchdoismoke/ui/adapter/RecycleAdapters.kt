@@ -1,5 +1,6 @@
 package com.sersh.howmuchdoismoke.ui.adapter
 
+import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import com.sersh.howmuchdoismoke.utils.DateMy
 
 class RecycleAdapters (val list: List<DateMy>): RecyclerView.Adapter<RecycleAdapters.MyViewHolder>(){
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val item = LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent, false)
         return MyViewHolder(item)
@@ -19,6 +21,13 @@ class RecycleAdapters (val list: List<DateMy>): RecyclerView.Adapter<RecycleAdap
 
         holder.one!!.text = list.get(position).data
             holder.two!!.text = list.get(position).number.toString()
+        if (holder.two!!.text.equals("0"))
+        {
+            holder.two!!.setTypeface(Typeface.DEFAULT)
+        }
+
+
+
     }
 
     override fun getItemCount(): Int {

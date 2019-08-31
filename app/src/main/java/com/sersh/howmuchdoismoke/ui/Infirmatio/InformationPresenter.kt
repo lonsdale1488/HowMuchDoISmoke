@@ -8,7 +8,6 @@ import com.sersh.howmuchdoismoke.data.Model
 class InformationPresenter(var iInfirmationView: IInfirmationView) {
 
  private var infirmationModel = Model()
-
     var LOG_TAG = "InformationPresenter"
 
     fun addCigaret() {
@@ -45,7 +44,13 @@ class InformationPresenter(var iInfirmationView: IInfirmationView) {
         {
             iInfirmationView.overUse()
         }
-        iInfirmationView.setCigaret(number)
+        if(number >= 10)
+        {
+            iInfirmationView.setCigaret(  number.toString())
+        } else (
+                iInfirmationView.setCigaret( "0" + number.toString())
+                )
+
     }
 
     fun smokeYestordsy() {

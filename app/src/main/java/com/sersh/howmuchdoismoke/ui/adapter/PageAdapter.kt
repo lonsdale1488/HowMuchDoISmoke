@@ -1,12 +1,20 @@
 package com.sersh.howmuchdoismoke.ui.adapter
 
+import com.sersh.howmuchdoismoke.AllTimeFargment
 import com.sersh.howmuchdoismoke.ui.Page.PageFragment
 
 
 class PageAdapter (fm: androidx.fragment.app.FragmentManager) : androidx.fragment.app.FragmentPagerAdapter(fm){
     private  val ARG_OBJECT = "object"
     override fun getItem(p0: Int): androidx.fragment.app.Fragment {
-        return PageFragment(p0)
+
+            if(p0 == 4) {
+                return AllTimeFargment()
+            }
+            else {
+                return PageFragment(p0)
+            }
+
     }
 
 

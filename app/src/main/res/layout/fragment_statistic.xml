@@ -6,32 +6,33 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F5F5F5"
+
+        android:background="@drawable/gray"
         android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+    >
+        <Button android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/back"
+                android:id="@+id/back"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:text="@string/first_page"
+                  android:textColor="@color/front_color"
+                  android:textSize="20sp"
+                  android:gravity="center"/>
+    </LinearLayout>
 
-    <androidx.appcompat.widget.Toolbar android:layout_width="wrap_content"
-                                       android:layout_height="wrap_content"
-                                       android:background="@drawable/gray">
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal">
-            <Button android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/back"/>
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="match_parent"
-                        android:text="Назад"
-            android:gravity="center"/>
-        </LinearLayout>
 
-
-    </androidx.appcompat.widget.Toolbar>
     <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:background="#F5F5F5"
     >
+
         <com.google.android.material.tabs.TabLayout
                 app:tabTextAppearance="@style/MyCustomTextAppearance"
                 app:tabMode="scrollable"

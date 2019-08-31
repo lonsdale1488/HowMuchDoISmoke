@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_table">30sp</dimen>
+    <dimen name="text_table">36sp</dimen>
     <dimen name="text_tablelitle">8sp</dimen>
+    <dimen name="text_icon">45sp</dimen>
+    <dimen name="textnear_icon">12sp</dimen>
+    <dimen name="text_graph">10sp</dimen>
+    <dimen name="text_recycle">14sp</dimen>
 </resources>

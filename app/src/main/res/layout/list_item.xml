@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+             >
+    <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  >
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -11,7 +17,7 @@
             android:layout_marginLeft="10dp"
             android:id="@+id/first_textrecycle"
             android:text="1"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_recycle"
             android:gravity="left"
 
     />
@@ -23,6 +29,12 @@
             android:id="@+id/last_textrecycle"
             android:text="2"
             android:gravity="right"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_recycle"
+            android:textStyle="bold"
     />
+</LinearLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/recycle_line"/>
+
 </LinearLayout>

@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
             android:id="@+id/action_one"
-            android:icon="@drawable/ic_equalizer_black_24dp"
+            android:icon="@mipmap/statistick_money"
             android:title=""/>
     <item
             android:id="@+id/action_two"
-            android:icon="@android:drawable/ic_menu_add"
+            android:icon="@mipmap/add"
             android:title=""
     />
     <item
             android:id="@+id/action_three"
-            android:icon="@drawable/ic_settings_black_24dp"
+            android:icon="@mipmap/setting"
             android:title="" />
 </menu>

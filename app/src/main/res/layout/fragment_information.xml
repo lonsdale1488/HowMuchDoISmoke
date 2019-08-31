@@ -1,239 +1,279 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/activity_main"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-    <LinearLayout
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F5F5F5"
-        android:orientation="vertical"
-        tools:context=".ui.Infirmatio.InformationFragment">
-
-        <RelativeLayout
-                android:id="@+id/relativeLayout"
+        android:layout_gravity="center"
+        android:background="#FAFAFA"
+        android:orientation="vertical">
+    <ScrollView
+            android:id="@+id/activity_main"
             android:layout_width="match_parent"
-            android:layout_height="286dp"
-            android:background="@color/relative_color">
-
-            <ImageView
-                android:id="@+id/statistic_id"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="17dp"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/statistic" />
-
-            <ImageView
-                android:id="@+id/change_cigarettid"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="17dp"
-                android:layout_marginRight="17dp"
-                android:src="@drawable/change" />
-
-            <ImageView
-                android:id="@+id/image_cigarette"
-                android:layout_width="105dp"
-                android:layout_height="105dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/cycle_blue"
-                android:padding="20dp"
-                android:src="@drawable/cigarette"
-                />
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="21dp"
-            android:text="@string/last_title"
-            android:textSize="20sp" />
+            android:layout_height="575dp"
+    >
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F5F5"
+                android:orientation="vertical"
+                tools:context=".ui.Infirmatio.InformationFragment">
 
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/used"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/defoult_used"
-
-                android:textSize="@dimen/text_table" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/arrow" />
-
-            <TextView
-                android:id="@+id/max"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/defoult_max"
-                android:textSize="@dimen/text_table" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="140dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:background="#FAFAFA"
-                android:gravity="left"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/smoke_yestorday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/defoult_used"
-                    android:textSize="@dimen/text_table" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:text = "@string/smoke_yestorday"
-                        android:textSize="@dimen/text_tablelitle" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:src="@drawable/calendar_pic" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="140dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="40dp"
-                android:background="#FAFAFA"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/smoking_average"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/defoult_used"
-                    android:textSize="@dimen/text_table" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:background="#FAFAFA"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:text="@string/smoke_average"
-                        android:textSize="@dimen/text_tablelitle" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:src="@drawable/cigarett_pic" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="320dp"
-            android:layout_height="220dp"
-            android:layout_gravity="center"
-            android:background="#FAFAFA"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="320dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="#FAFAFA"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+            <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="286dp"
+                    android:background="@drawable/back_fon">
 
                 <ImageView
+                        android:id="@+id/statistic_id"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@mipmap/statistick"/>
+
+                <ImageView
+                        android:id="@+id/change_cigarettid"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginRight="17dp"
+                        android:src="@mipmap/change"/>
+
+
+
+            <RelativeLayout
+                    android:id="@+id/relativeLayouTwo"
+                    android:layout_width="174dp"
+                    android:layout_height="174dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    >
+
+
+                <ImageView
+                        android:id="@+id/image_cigarette"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:padding="20dp"
+                        android:src="@mipmap/cigarette"
+                />
+            </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/chart" />
+                    android:layout_marginTop="27dp"
+                    android:text="@string/last_title"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
 
                 <TextView
+                        android:id="@+id/used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/defoult_used"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_table"/>
+
+                <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/arrow"/>
+
+                <TextView
+                        android:id="@+id/max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/defoult_max"
+                        android:textSize="@dimen/text_table"
+                        android:textStyle="bold"/>
+
+            </LinearLayout>
+            <TextView
+                    android:id="@+id/overuse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/smoke_average"
-                    android:textSize="16sp" />
+                    android:text="@string/overuse"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="21dp"
+            android:textColor="#F5F5F5"/>
+            <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="156dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"
+                        android:background="#FAFAFA"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/smoke_yestorday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/defoult_used"
+                            android:textSize="@dimen/text_icon"
+                            android:textStyle="bold"
+                    android:textColor="@color/big_number"/>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="21dp"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:text="@string/smoke_yestorday"
+                                android:textSize="@dimen/textnear_icon"
+                                android:textColor="@color/text_color"/>
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:src="@mipmap/calendar"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="156dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:background="#FAFAFA"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/smoking_average"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/defoult_used"
+                            android:textSize="@dimen/text_icon"
+                            android:textStyle="bold"
+                            android:textColor="@color/big_number"/>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="21dp"
+                            android:background="#FAFAFA"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:text="@string/smoke_average"
+                                android:textSize="@dimen/textnear_icon"
+                                android:textColor="@color/text_color"
+                        />
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:src="@mipmap/cigarette_icon"/>
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
 
-            <com.jjoe64.graphview.GraphView
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:id="@+id/graph"
-                android:layout_marginBottom="20dp"
-            />
-        </LinearLayout>
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/navigation"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_gravity="start"
-                android:layout_marginTop="8dp"
-                android:background="@color/front_color"
-                app:menu="@menu/menu_bottom_navigation"/>
-    </LinearLayout>
+            <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:background="#FAFAFA"
+                    android:orientation="vertical">
 
-</ScrollView>
+                <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="#FAFAFA"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/ashtray"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/smoke_average"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"/>
+                </LinearLayout>
+
+                <com.jjoe64.graphview.GraphView
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:id="@+id/graph"
+                        android:layout_marginBottom="20dp"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="8dp"
+            app:menu="@menu/menu_bottom_navigation"
+    />
+</LinearLayout>

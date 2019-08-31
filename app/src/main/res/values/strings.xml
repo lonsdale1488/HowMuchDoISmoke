@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HowMuchDoISmoke</string>
     <string name="last_title">Скурено сьогодні</string>
-    <string name="defoult_used">0</string>
+    <string name="defoult_used">00</string>
     <string name="defoult_max">20</string>
     <string name="smoke_yestorday">Скурено вчора</string>
     <string name="smoke_average">Cкурено
@@ -16,11 +16,32 @@
     <string name="total_number_of_cigarettes_smoked">Загальна к-ть викурених цигарок</string>
     <string name="electro_sigar">Електроних сигарет</string>
     <string name="sigar">Простих сигарет</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
+   <string name="overuse">Перевищена кількість шт на добу</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_page">Cтатистика викурених сигарет</string>
 
+    <string name="monday">ПН</string>
+    <string name="tuesday">ВТ</string>
+    <string name="wednesday">СР</string>
+    <string name="thursday">ЧТ</string>
+    <string name="friday">ПТ</string>
+    <string name="saturday">СБ</string>
+    <string name="sanday">НД</string>
 
+    <string name="week_l">тиждень</string>
+
+    <string name="january">Січень</string>
+    <string name="february">Лютий</string>
+    <string name="march">Березень</string>
+    <string name="april">Квітень</string>
+    <string name="may">Травень</string>
+    <string name="june">Червень</string>
+    <string name="july">Липень</string>
+    <string name="august">Серпень</string>
+    <string name="september">Вересень</string>
+    <string name="october">Жовтень</string>
+    <string name="november">Листопад</string>
+    <string name="december">Грудень</string>
 
 
 </resources>

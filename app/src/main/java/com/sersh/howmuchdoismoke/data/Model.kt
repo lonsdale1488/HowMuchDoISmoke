@@ -71,5 +71,12 @@ class Model() {
         }
     }
 
+    fun getDayOFWeek (int: Int):Int
+    { Log.d(LOG_TAG, "getDayOFWeek - $int")
+        val c = Calendar.getInstance()
+        c.add(Calendar.DATE, int)
+        val dayOfWeek = c.get(Calendar.DAY_OF_WEEK)
+        return dayOfWeek
+    }
 
 }

@@ -3,8 +3,9 @@ package com.sersh.howmuchdoismoke.ui
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayout
 import com.sersh.howmuchdoismoke.ui.adapter.PageAdapter
-import com.sersh.howmuchdoismoke.R
 import android.view.*
+import com.sersh.howmuchdoismoke.MainActivity
+import kotlinx.android.synthetic.main.fragment_statistic.*
 
 
 class StatisticFragment : androidx.fragment.app.Fragment() {
@@ -27,10 +28,14 @@ class StatisticFragment : androidx.fragment.app.Fragment() {
         tabLayout.setupWithViewPager(viewPager)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-
-        super.onCreateOptionsMenu(menu, inflater)
+    override fun onResume() {
+        super.onResume()
+        initListener ()
     }
-
-
+    fun initListener ()
+    {
+        back.setOnClickListener {
+            (activity as MainActivity).showInformationFragment()
+        }
+    }
 }

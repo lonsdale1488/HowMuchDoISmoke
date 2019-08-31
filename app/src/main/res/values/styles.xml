@@ -27,7 +27,9 @@
         <item name="android:textColor">
             #515151
         </item>
-
+        <item name="android:textStyle">
+            bold
+        </item>
     </style>
 
     <style name="number">
@@ -35,11 +37,12 @@
         <item name="android:textSize">
             30sp
         </item>
-
         <item name="android:textColor">
             #969696
         </item>
-
+        <item name="android:textStyle">
+            bold
+        </item>
     </style>
 
     <style name="big_number">
@@ -51,6 +54,9 @@
         <item name="android:textColor">
             #969696
         </item>
-
+        <item name="android:textStyle">
+            bold
+        </item>
     </style>
+
 </resources>
