@@ -1,9 +1,10 @@
-package com.sersh.howmuchdoismoke
+package com.sersh.howmuchdoismoke.ui.AllTime
 
+import com.sersh.howmuchdoismoke.ui.AllTime.IAllTime
 import com.sersh.howmuchdoismoke.ui.Presenter
 import com.sersh.howmuchdoismoke.utils.DateMy
 
-class AllTimePresenter (val iAllTime: IAllTime ): Presenter() {
+class AllTimePresenter (val iAllTime: IAllTime): Presenter() {
 
     override fun get() {
 

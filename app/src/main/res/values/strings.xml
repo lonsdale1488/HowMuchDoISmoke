@@ -16,9 +16,13 @@
     <string name="total_number_of_cigarettes_smoked">Загальна к-ть викурених цигарок</string>
     <string name="electro_sigar">Електроних сигарет</string>
     <string name="sigar">Простих сигарет</string>
-   <string name="overuse">Перевищена кількість шт на добу</string>
+    <string name="overuse">Перевищена кількість шт на добу</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="first_page">Cтатистика викурених сигарет</string>
+    <string name="costs">Витрати</string>
+    <string name="pack">Загальна к-ть куплених пачок, шт</string>
+    <string name="all_money">Загальна к-ть витрачених грошей, грн</string>
+    <string name="all_spend">Всого куплено</string>
 
     <string name="monday">ПН</string>
     <string name="tuesday">ВТ</string>
@@ -43,5 +47,7 @@
     <string name="november">Листопад</string>
     <string name="december">Грудень</string>
 
+    <string name="today">Сьогодні</string>
 
+    <string name="buy">Куплено</string>
 </resources>

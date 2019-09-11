@@ -53,26 +53,25 @@
                         android:src="@mipmap/change"/>
 
 
-
-            <RelativeLayout
-                    android:id="@+id/relativeLayouTwo"
-                    android:layout_width="174dp"
-                    android:layout_height="174dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    >
-
-
-                <ImageView
-                        android:id="@+id/image_cigarette"
-                        android:layout_width="105dp"
-                        android:layout_height="105dp"
+                <RelativeLayout
+                        android:id="@+id/relativeLayouTwo"
+                        android:layout_width="174dp"
+                        android:layout_height="174dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:padding="20dp"
-                        android:src="@mipmap/cigarette"
-                />
-            </RelativeLayout>
+                >
+
+
+                    <ImageView
+                            android:id="@+id/image_cigarette"
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:padding="20dp"
+                            android:src="@mipmap/cigarette"
+                    />
+                </RelativeLayout>
             </RelativeLayout>
 
             <TextView
@@ -82,7 +81,8 @@
                     android:layout_marginTop="27dp"
                     android:text="@string/last_title"
                     android:textSize="14sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/title_color"/>
 
             <LinearLayout
                     android:layout_width="wrap_content"
@@ -98,7 +98,8 @@
                         android:layout_gravity="center"
                         android:text="@string/defoult_used"
                         android:textStyle="bold"
-                        android:textSize="@dimen/text_table"/>
+                        android:textSize="@dimen/text_table"
+                        android:textColor="@color/title_color"/>
 
                 <ImageView
                         android:layout_width="18dp"
@@ -115,7 +116,8 @@
                         android:layout_gravity="center"
                         android:text="@string/defoult_max"
                         android:textSize="@dimen/text_table"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:textColor="@color/title_color"/>
 
             </LinearLayout>
             <TextView
@@ -127,31 +129,34 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="21dp"
-            android:textColor="#F5F5F5"/>
-            <LinearLayout
-                    android:layout_width="320dp"
-                    android:layout_height="wrap_content"
+                    android:textColor="#F5F5F5"/>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
                     android:layout_gravity="center"
-                    android:layout_margin="5dp"
-                    android:orientation="horizontal">
+            >
 
                 <LinearLayout
-                        android:layout_width="156dp"
-                        android:layout_height="140dp"
+                        android:layout_width="175dp"
+                        android:layout_height="165dp"
                         android:layout_gravity="center"
-                        android:background="#FAFAFA"
-                        android:gravity="left"
-                        android:orientation="vertical">
+                        android:background="@drawable/card"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:orientation="vertical"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true">
 
                     <TextView
                             android:id="@+id/smoke_yestorday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/defoult_used"
-                            android:textSize="@dimen/text_icon"
-                            android:textStyle="bold"
-                    android:textColor="@color/big_number"/>
+                            android:textAppearance="@style/big_number"
+                            android:layout_marginTop="21dp"
+                            android:text="@string/defoult_used"/>
 
                     <LinearLayout
                             android:layout_width="wrap_content"
@@ -164,9 +169,8 @@
                                 android:layout_width="80dp"
                                 android:layout_height="30dp"
                                 android:layout_gravity="center"
-                                android:text="@string/smoke_yestorday"
-                                android:textSize="@dimen/textnear_icon"
-                                android:textColor="@color/text_color"/>
+                               android:textAppearance="@style/text_on_card"
+                                android:text="@string/smoke_yestorday"/>
 
                         <ImageView
                                 android:layout_width="wrap_content"
@@ -179,22 +183,27 @@
                 </LinearLayout>
 
                 <LinearLayout
-                        android:layout_width="156dp"
-                        android:layout_height="140dp"
+                        android:layout_width="175dp"
+                        android:layout_height="165dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="16dp"
-                        android:background="#FAFAFA"
-                        android:orientation="vertical">
+                        android:background="@drawable/card"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true">
 
                     <TextView
                             android:id="@+id/smoking_average"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/defoult_used"
-                            android:textSize="@dimen/text_icon"
-                            android:textStyle="bold"
-                            android:textColor="@color/big_number"/>
+                            android:textAppearance="@style/big_number"
+                            android:layout_marginTop="21dp"
+
+                            android:text="@string/defoult_used"/>
 
                     <LinearLayout
                             android:layout_width="wrap_content"
@@ -209,8 +218,7 @@
                                 android:layout_height="30dp"
                                 android:layout_gravity="center"
                                 android:text="@string/smoke_average"
-                                android:textSize="@dimen/textnear_icon"
-                                android:textColor="@color/text_color"
+                                android:textAppearance="@style/text_on_card"
                         />
 
                         <ImageView
@@ -223,14 +231,14 @@
                     </LinearLayout>
                 </LinearLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <LinearLayout
                     android:layout_width="320dp"
                     android:layout_height="220dp"
                     android:layout_gravity="center"
-                    android:background="#FAFAFA"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp">
 
                 <LinearLayout
                         android:layout_width="320dp"
@@ -238,7 +246,8 @@
                         android:layout_gravity="center"
                         android:background="#FAFAFA"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                >
 
                     <ImageView
                             android:layout_width="wrap_content"

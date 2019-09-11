@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".StatisticMoneyOnDayFragment"
+              android:orientation="vertical"
+              android:background="@color/back_color">
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today"
+            android:textAppearance="@style/text_date"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="13dp"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="225dp"
+                  android:orientation="vertical"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginLeft="16dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginRight="16dp"
+                  android:layout_marginEnd="16dp"
+                  android:background="@color/front_color">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+
+        >
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="14dp"
+                       android:layout_marginStart="14dp"
+                       android:layout_centerVertical="true"
+                       android:src="@mipmap/dollar"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/buy"
+                    android:textAppearance="@style/text_on_card"
+                    android:layout_marginLeft="53dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_centerVertical="true"
+            />
+
+        </RelativeLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <TextView android:layout_width="23dp"
+                      android:layout_height="36dp"
+                      android:layout_marginLeft="14dp"
+                      android:layout_marginStart="14dp"
+                      android:background="@color/back_color"
+                      android:text="10 шт"
+                      android:textSize="12sp"
+                      android:layout_gravity="center"
+                      android:gravity="center"/>
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical"
+                          android:layout_marginLeft="14dp"
+                          android:layout_marginStart="14dp">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:text="Compliment White"
+                          android:textStyle="bold"
+                          android:gravity="center"
+                          android:layout_weight="1"
+                          android:textColor="@color/big_number"
+                />
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:text="смол - 1 мг, нікотину - 0,1 м"
+                          android:textSize="10sp"
+                          android:gravity="center"
+                          android:textColor="@color/big_number"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginLeft="14dp"
+                          android:layout_marginStart="14dp">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textSize="16sp"
+                          android:text="Ціна шт"
+                          android:textStyle="bold"
+                          android:textColor="@color/big_number"
+                          android:gravity="end"
+                          android:layout_gravity="end"
+                />
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:layout_gravity="end">
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="13sp"
+                              android:text="$"
+                              android:textStyle="bold"
+                              android:gravity="end"
+                              android:layout_gravity="end"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:gravity="end"
+                              android:layout_gravity="end"
+                              android:text="27.50"
+                              android:textSize="18sp"
+                              android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

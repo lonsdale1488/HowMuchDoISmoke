@@ -9,7 +9,6 @@ abstract class Presenter {
     private var variable = 0
     private var variableSimilar = 0
     private var variableElectronic = 0
-    abstract fun get()
 
 
     private fun smokeOnData(

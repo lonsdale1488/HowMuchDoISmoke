@@ -4,8 +4,7 @@ import com.sersh.howmuchdoismoke.ui.Presenter
 import com.sersh.howmuchdoismoke.utils.DateMy
 
 class PagePresenter(var iPageView: IPageView) : Presenter() {
-    override fun get() {
-    }
+
 
     var list: MutableList<DateMy> = arrayListOf()
     val hourOnDay = 24

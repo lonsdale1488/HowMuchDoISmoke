@@ -1,13 +1,13 @@
-package com.sersh.howmuchdoismoke
+package com.sersh.howmuchdoismoke.ui.AllTime
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AbsListView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.sersh.howmuchdoismoke.R
 import com.sersh.howmuchdoismoke.ui.adapter.RecycleAdapters
 import kotlinx.android.synthetic.main.fragment_all_time.*
 

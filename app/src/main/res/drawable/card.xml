@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item>
+            <shape
+                android:shape="rectangle">
+<gradient
+                  android:startColor="#25B0B0B0"
+                  android:endColor="#40F5F5F5"
+                  android:type="radial"
+                  android:gradientRadius="105dp"
+
+                  />
+                <corners android:radius = "5dp"/>
+            </shape>
+        </item>
+    <item
+            android:right="17dp"
+            android:left="17dp"
+            android:bottom="17dp"
+            android:top="17dp"
+    >
+        <shape
+                android:shape="rectangle">
+        <solid  android:color = "@color/front_color"/>
+        <corners android:radius = "5dp"/>
+        </shape>
+    </item>
+
+</layer-list>
+
+
+<!--<vector-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:aapt="http://schemas.android.com/aapt"-->
+        <!--android:width="156dp"-->
+        <!--android:height="140dp"-->
+        <!--android:viewportWidth="156"-->
+        <!--android:viewportHeight="140"-->
+<!--&gt;-->
+
+    <!--<group>-->
+
+        <!--<clip-path-->
+                <!--android:pathData="M5 0H151C153.761 0 156 2.23858 156 5V135C156 137.761 153.761 140 151 140H5C2.23858 140 0 137.761 0 135V5C0 2.23858 2.23858 0 5 0Z"-->
+        <!--/>-->
+
+        <!--<path-->
+                <!--android:pathData="M0 0V140H156V0"-->
+                <!--android:fillColor="#FAFAFA"-->
+        <!--/>-->
+
+    <!--</group>-->
+
+<!--</vector>-->

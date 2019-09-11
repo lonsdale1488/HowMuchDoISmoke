@@ -1,6 +1,6 @@
 package com.sersh.howmuchdoismoke.ui.adapter
 
-import com.sersh.howmuchdoismoke.AllTimeFargment
+import com.sersh.howmuchdoismoke.ui.AllTime.AllTimeFargment
 import com.sersh.howmuchdoismoke.ui.Page.PageFragment
 
 
